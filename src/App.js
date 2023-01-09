@@ -1,13 +1,21 @@
-import { createContext, useCallback, useContext, useMemo, useState } from 'react'
-import { ControlledForm, ReactHookForm, UncontrolledForm } from './components'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import { Home, About, Products, Product, NotFound } from './pages'
 
 const App = () => {
   return (
-    <div>
-      <ControlledForm />
-      <UncontrolledForm />
-      <ReactHookForm />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="contacts" element={<About />} />
+
+        <Route path="products" element={<Products />} />
+        <Route path="product/:id" element={<Product />} />
+
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   )
 }
 
