@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/964.52e974f1.chunk.js","mappings":"mJAMA,UAJc,WACZ,OAAO,yBAAK,eACd,C","sources":["pages/About.js"],"sourcesContent":["import React from 'react'\n\nconst About = () => {\n  return <div>Product app</div>\n}\n\nexport default About\n"],"names":[],"sourceRoot":""}
